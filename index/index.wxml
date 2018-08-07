@@ -1,0 +1,23 @@
+<view class="page-body">
+    <view class="page-section page-section-gap">
+      <map
+        id="myMap"
+        style="width: 100%; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        covers="{{covers}}"
+        show-location
+      ></map>
+    </view>
+    <view wx:if="{{userLatitude && userLongitude}}">
+        <text>Latitude {{userLatitude}}, Longitude {{userLongitude}}</text>
+    </view>
+    <view class="btn-area">
+      <button bindtap="getCenterLocation" >Get location</button>
+      <button bindtap="moveToLocation" >Move Place</button>
+      <button bindtap="translateMarker" >Moving annotation</button>
+      <button bindtap="includePoints" >Show all locations</button>
+    </view>
+  </view>
+  
